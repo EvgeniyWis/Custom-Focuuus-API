@@ -1,3 +1,5 @@
+## Кастомный репозиторий Focuuus-API для RunPod
+
 [![Docker Image CI](https://github.com/konieshadow/Fooocus-API/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/konieshadow/Fooocus-API/actions/workflows/docker-image.yml)
 
 [ English | [中文](/README_zh.md) ]
