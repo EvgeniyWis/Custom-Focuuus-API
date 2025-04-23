@@ -101,7 +101,7 @@ class Predictor(BasePredictor):
             default='',
             description="Prompt for image generation"),
         inpaint_input_image: Path = Input(
-            default=None,
+            default='repositories/Fooocus/models/inpaint/image.png',
             description="Input image for inpaint or outpaint, keep None for not inpaint or outpaint. Please noticed, `uov_input_image` has bigger priority is not None."),
         inpaint_input_mask: Path = Input(
             default=None,
