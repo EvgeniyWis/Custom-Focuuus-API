@@ -7,9 +7,7 @@
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "Query"
-        ],
+        "tags": ["Query"],
         "summary": "Home",
         "description": "Home page",
         "operationId": "home__get",
@@ -32,9 +30,7 @@
     },
     "/ping": {
       "get": {
-        "tags": [
-          "Query"
-        ],
+        "tags": ["Query"],
         "summary": "Ping",
         "description": "Returns a simple 'pong'",
         "operationId": "ping_ping_get",
@@ -57,9 +53,7 @@
     },
     "/v1/generation/query-job": {
       "get": {
-        "tags": [
-          "Query"
-        ],
+        "tags": ["Query"],
         "summary": "Query Job",
         "description": "Query async generation job",
         "operationId": "query_job_v1_generation_query_job_get",
@@ -115,9 +109,7 @@
     },
     "/v1/generation/job-queue": {
       "get": {
-        "tags": [
-          "Query"
-        ],
+        "tags": ["Query"],
         "summary": "Job Queue",
         "description": "Query job queue info",
         "operationId": "job_queue_v1_generation_job_queue_get",
@@ -142,9 +134,7 @@
     },
     "/v1/generation/job-history": {
       "get": {
-        "tags": [
-          "Query"
-        ],
+        "tags": ["Query"],
         "summary": "Get History",
         "description": "Query historical job data",
         "operationId": "get_history_v1_generation_job_history_get",
@@ -218,9 +208,7 @@
     },
     "/v1/engines/all-models": {
       "get": {
-        "tags": [
-          "Query"
-        ],
+        "tags": ["Query"],
         "summary": "All Models",
         "description": "Get all filenames of base model and lora",
         "operationId": "all_models_v1_engines_all_models_get",
@@ -245,9 +233,7 @@
     },
     "/v1/engines/styles": {
       "get": {
-        "tags": [
-          "Query"
-        ],
+        "tags": ["Query"],
         "summary": "All Styles",
         "description": "Get all legal Fooocus styles",
         "operationId": "all_styles_v1_engines_styles_get",
@@ -276,9 +262,7 @@
     },
     "/v1/generation/text-to-image": {
       "post": {
-        "tags": [
-          "GenerateV1"
-        ],
+        "tags": ["GenerateV1"],
         "summary": "Text2Img Generation",
         "description": "Text to Image Generation\n\n    A text to image generation endpoint\n    Arguments:\n        req {Text2ImgRequest} -- Text to image generation request\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes\n    returns:\n        Response -- img_generate_responses",
         "operationId": "text2img_generation_v1_generation_text_to_image_post",
@@ -379,9 +363,7 @@
     },
     "/v1/generation/image-upscale-vary": {
       "post": {
-        "tags": [
-          "GenerateV1"
-        ],
+        "tags": ["GenerateV1"],
         "summary": "Img Upscale Or Vary",
         "description": "Image upscale or vary\n\n    Image upscale or vary\n    Arguments:\n        input_image {UploadFile} -- Input image file\n        req {ImgUpscaleOrVaryRequest} -- Request body\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes\n    Returns:\n        Response -- img_generate_responses",
         "operationId": "img_upscale_or_vary_v1_generation_image_upscale_vary_post",
@@ -482,9 +464,7 @@
     },
     "/v1/generation/image-inpaint-outpaint": {
       "post": {
-        "tags": [
-          "GenerateV1"
-        ],
+        "tags": ["GenerateV1"],
         "summary": "Img Inpaint Or Outpaint",
         "description": "Inpaint or outpaint\n\n    Inpaint or outpaint\n    Arguments:\n        input_image {UploadFile} -- Input image file\n        req {ImgInpaintOrOutpaintRequest} -- Request body\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes",
         "operationId": "img_inpaint_or_outpaint_v1_generation_image_inpaint_outpaint_post",
@@ -585,9 +565,7 @@
     },
     "/v1/generation/image-prompt": {
       "post": {
-        "tags": [
-          "GenerateV1"
-        ],
+        "tags": ["GenerateV1"],
         "summary": "Img Prompt",
         "description": "Image Prompt\n\n    Image Prompt\n    A prompt-based image generation.\n    Arguments:\n        cn_img1 {UploadFile} -- Input image file\n        req {ImgPromptRequest} -- Request body\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes\n    Returns:\n        Response -- img_generate_responses",
         "operationId": "img_prompt_v1_generation_image_prompt_post",
@@ -692,9 +670,7 @@
     },
     "/v1/tools/describe-image": {
       "post": {
-        "tags": [
-          "GenerateV1"
-        ],
+        "tags": ["GenerateV1"],
         "summary": "Describe Image",
         "description": "Describe image\n\n    Describe image, Get tags from an image\n    Arguments:\n        image {UploadFile} -- Image to get tags\n        image_type {DescribeImageType} -- Image type, 'Photo' or 'Anime'\n    Returns:\n        DescribeImageResponse -- Describe image response, a string",
         "operationId": "describe_image_v1_tools_describe_image_post",
@@ -757,9 +733,7 @@
     },
     "/v1/generation/stop": {
       "post": {
-        "tags": [
-          "Default"
-        ],
+        "tags": ["Default"],
         "summary": "Stop",
         "description": "Job stopping",
         "operationId": "stop_v1_generation_stop_post",
@@ -784,9 +758,7 @@
     },
     "/v2/generation/text-to-image-with-ip": {
       "post": {
-        "tags": [
-          "GenerateV2"
-        ],
+        "tags": ["GenerateV2"],
         "summary": "Text To Img With Ip",
         "description": "Text to image with prompt\n\n    Text to image with prompt\n    Arguments:\n        req {Text2ImgRequestWithPrompt} -- Text to image generation request\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes\n    Returns:\n        Response -- img_generate_responses",
         "operationId": "text_to_img_with_ip_v2_generation_text_to_image_with_ip_post",
@@ -887,9 +859,7 @@
     },
     "/v2/generation/image-upscale-vary": {
       "post": {
-        "tags": [
-          "GenerateV2"
-        ],
+        "tags": ["GenerateV2"],
         "summary": "Img Upscale Or Vary",
         "description": "Image upscale or vary\n\n    Image upscale or vary\n    Arguments:\n        req {ImgUpscaleOrVaryRequestJson} -- Image upscale or vary request\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes\n    Returns:\n            Response -- img_generate_responses",
         "operationId": "img_upscale_or_vary_v2_generation_image_upscale_vary_post",
@@ -990,9 +960,7 @@
     },
     "/v2/generation/image-inpaint-outpaint": {
       "post": {
-        "tags": [
-          "GenerateV2"
-        ],
+        "tags": ["GenerateV2"],
         "summary": "Img Inpaint Or Outpaint",
         "description": "Inpaint or outpaint\n\n    Inpaint or outpaint\n    Arguments:\n        req {ImgInpaintOrOutpaintRequestJson} -- Request body\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes\n    Returns:\n        Response -- img_generate_responses",
         "operationId": "img_inpaint_or_outpaint_v2_generation_image_inpaint_outpaint_post",
@@ -1093,9 +1061,7 @@
     },
     "/v2/generation/image-prompt": {
       "post": {
-        "tags": [
-          "GenerateV2"
-        ],
+        "tags": ["GenerateV2"],
         "summary": "Img Prompt",
         "description": "Image prompt\n\n    Image prompt generation\n    Arguments:\n        req {ImgPromptRequest} -- Request body\n        accept {str} -- Accept header\n        accept_query {str} -- Parameter to override 'Accept' header, 'image/png' for output bytes\n    Returns:\n        Response -- img_generate_responses",
         "operationId": "img_prompt_v2_generation_image_prompt_post",
@@ -1199,6 +1165,28 @@
     "schemas": {
       "AdvancedParams": {
         "properties": {
+          "ip_adapter_face": {
+            "type": "boolean",
+            "title": "IP Adapter Face",
+            "description": "Enable IP Adapter Face ControlNet",
+            "default": false
+          },
+          "ip_adapter_face_weight": {
+            "type": "number",
+            "maximum": 2,
+            "minimum": 0,
+            "title": "IP Adapter Face Weight",
+            "description": "Weight for IP Adapter Face ControlNet",
+            "default": 1
+          },
+          "ip_adapter_face_stop": {
+            "type": "number",
+            "maximum": 1,
+            "minimum": 0,
+            "title": "IP Adapter Face Stop",
+            "description": "Stop at for IP Adapter Face ControlNet",
+            "default": 1
+          },
           "disable_preview": {
             "type": "boolean",
             "title": "Disable Preview",
@@ -1472,10 +1460,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "model_filenames",
-          "lora_filenames"
-        ],
+        "required": ["model_filenames", "lora_filenames"],
         "title": "AllModelNamesResponse",
         "description": "all model list response"
       },
@@ -1548,23 +1533,13 @@
           }
         },
         "type": "object",
-        "required": [
-          "job_id",
-          "job_type",
-          "job_stage",
-          "job_progress"
-        ],
+        "required": ["job_id", "job_type", "job_stage", "job_progress"],
         "title": "AsyncJobResponse",
         "description": "Async job response\nAttributes:\n    job_id: Job ID\n    job_type: Job type\n    job_stage: Job stage\n    job_progress: Job progress, 0-100\n    job_status: Job status\n    job_step_preview: Job step preview\n    job_result: Job result"
       },
       "AsyncJobStage": {
         "type": "string",
-        "enum": [
-          "WAITING",
-          "RUNNING",
-          "SUCCESS",
-          "ERROR"
-        ],
+        "enum": ["WAITING", "RUNNING", "SUCCESS", "ERROR"],
         "title": "AsyncJobStage",
         "description": "Async job stage"
       },
@@ -1577,9 +1552,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "image"
-        ],
+        "required": ["image"],
         "title": "Body_describe_image_v1_tools_describe_image_post"
       },
       "Body_img_inpaint_or_outpaint_v1_generation_image_inpaint_outpaint_post": {
@@ -1658,11 +1631,7 @@
             "type": "array",
             "title": "Style Selections",
             "description": "Fooocus style selections, separated by comma",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -1770,9 +1739,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "input_image"
-        ],
+        "required": ["input_image"],
         "title": "Body_img_inpaint_or_outpaint_v1_generation_image_inpaint_outpaint_post"
       },
       "Body_img_prompt_v1_generation_image_prompt_post": {
@@ -2023,11 +1990,7 @@
             "type": "array",
             "title": "Style Selections",
             "description": "Fooocus style selections, separated by comma",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -2177,11 +2140,7 @@
             "type": "array",
             "title": "Style Selections",
             "description": "Fooocus style selections, separated by comma",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -2291,10 +2250,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "input_image",
-          "uov_method"
-        ],
+        "required": ["input_image", "uov_method"],
         "title": "Body_img_upscale_or_vary_v1_generation_image_upscale_vary_post"
       },
       "CommonRequest": {
@@ -2315,11 +2271,7 @@
             },
             "type": "array",
             "title": "Style Selections",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -2456,7 +2408,10 @@
               "refiner_swap_method": "joint",
               "sampler_name": "dpmpp_2m_sde_gpu",
               "scheduler_name": "karras",
-              "skipping_cn_preprocessor": false
+              "skipping_cn_preprocessor": false,
+              "ip_adapter_face": false,
+              "ip_adapter_face_weight": 1,
+              "ip_adapter_face_stop": 1
             }
           },
           "save_extension": {
@@ -2503,12 +2458,7 @@
       },
       "ControlNetType": {
         "type": "string",
-        "enum": [
-          "ImagePrompt",
-          "FaceSwap",
-          "PyraCanny",
-          "CPDS"
-        ],
+        "enum": ["ImagePrompt", "FaceSwap", "PyraCanny", "CPDS"],
         "title": "ControlNetType",
         "description": "ControlNet Type"
       },
@@ -2520,18 +2470,13 @@
           }
         },
         "type": "object",
-        "required": [
-          "describe"
-        ],
+        "required": ["describe"],
         "title": "DescribeImageResponse",
         "description": "describe image response"
       },
       "DescribeImageType": {
         "type": "string",
-        "enum": [
-          "Photo",
-          "Anime"
-        ],
+        "enum": ["Photo", "Anime"],
         "title": "DescribeImageType",
         "description": "Image type for image to prompt"
       },
@@ -2571,23 +2516,13 @@
           }
         },
         "type": "object",
-        "required": [
-          "base64",
-          "url",
-          "seed",
-          "finish_reason"
-        ],
+        "required": ["base64", "url", "seed", "finish_reason"],
         "title": "GeneratedImageResult",
         "description": "Generated images result"
       },
       "GenerationFinishReason": {
         "type": "string",
-        "enum": [
-          "SUCCESS",
-          "QUEUE_IS_FULL",
-          "USER_CANCEL",
-          "ERROR"
-        ],
+        "enum": ["SUCCESS", "QUEUE_IS_FULL", "USER_CANCEL", "ERROR"],
         "title": "GenerationFinishReason",
         "description": "Generation finish reason"
       },
@@ -2734,11 +2669,7 @@
             },
             "type": "array",
             "title": "Style Selections",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -3023,9 +2954,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "input_image"
-        ],
+        "required": ["input_image"],
         "title": "ImgInpaintOrOutpaintRequestJson",
         "description": "image inpaint or outpaint request"
       },
@@ -3047,11 +2976,7 @@
             },
             "type": "array",
             "title": "Style Selections",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -3342,9 +3267,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "image_prompts"
-        ],
+        "required": ["image_prompts"],
         "title": "ImgPromptRequestJson",
         "description": "img prompt request json"
       },
@@ -3366,11 +3289,7 @@
             },
             "type": "array",
             "title": "Style Selections",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -3592,9 +3511,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "input_image"
-        ],
+        "required": ["input_image"],
         "title": "ImgUpscaleOrVaryRequestJson",
         "description": "img upscale or vary request json"
       },
@@ -3611,9 +3528,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "job_id"
-        ],
+        "required": ["job_id"],
         "title": "JobHistoryInfo",
         "description": "job history info"
       },
@@ -3666,11 +3581,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "running_size",
-          "finished_size",
-          "last_job_id"
-        ],
+        "required": ["running_size", "finished_size", "last_job_id"],
         "title": "JobQueueInfo",
         "description": "job queue info\nAttributes:\n    running_size: int, The current running and waiting job count\n    finished_size: int, The current finished job count\n    last_job_id: str, Last submit generation job id"
       },
@@ -3693,32 +3604,19 @@
           }
         },
         "type": "object",
-        "required": [
-          "enabled",
-          "model_name"
-        ],
+        "required": ["enabled", "model_name"],
         "title": "Lora",
         "description": "Common params lora model"
       },
       "OutpaintExpansion": {
         "type": "string",
-        "enum": [
-          "Left",
-          "Right",
-          "Top",
-          "Bottom"
-        ],
+        "enum": ["Left", "Right", "Top", "Bottom"],
         "title": "OutpaintExpansion",
         "description": "Outpaint expansion"
       },
       "PerformanceSelection": {
         "type": "string",
-        "enum": [
-          "Speed",
-          "Quality",
-          "Extreme Speed",
-          "Lightning"
-        ],
+        "enum": ["Speed", "Quality", "Extreme Speed", "Lightning"],
         "title": "PerformanceSelection",
         "description": "Performance selection"
       },
@@ -3730,9 +3628,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "msg"
-        ],
+        "required": ["msg"],
         "title": "StopResponse",
         "description": "stop task response"
       },
@@ -3766,11 +3662,7 @@
             },
             "type": "array",
             "title": "Style Selections",
-            "default": [
-              "Fooocus V2",
-              "Fooocus Enhance",
-              "Fooocus Sharp"
-            ]
+            "default": ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"]
           },
           "performance_selection": {
             "allOf": [
@@ -3999,11 +3891,7 @@
           }
         },
         "type": "object",
-        "required": [
-          "loc",
-          "msg",
-          "type"
-        ],
+        "required": ["loc", "msg", "type"],
         "title": "ValidationError"
       }
     },
