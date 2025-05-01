@@ -8,7 +8,6 @@ __pycache__
 
 # models
 *.ckpt
-*.safetensors
 *.pth
 *.pt
 *.bin
